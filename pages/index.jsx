@@ -125,7 +125,7 @@ export default function Home() {
     let buyMeACoffee;
     isWalletConnected();
     getMemos();
-    
+
     // Create an event handler function for when someone sends
     // us a new memo.
     const onNewMemo = (from, timestamp, name, message) => {
@@ -179,7 +179,7 @@ export default function Home() {
         {currentAccount ? (
           <div>
             <form>
-              <div class="formgroup">
+              <div >
                 <label>
                   Name
                 </label>
@@ -193,7 +193,7 @@ export default function Home() {
                   />
               </div>
               <br/>
-              <div class="formgroup">
+              <div>
                 <label>
                   Send Albert a message
                 </label>
@@ -228,7 +228,7 @@ export default function Home() {
       {currentAccount && (memos.map((memo, idx) => {
         return (
           <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
-            <p style={{"font-weight":"bold"}}>"{memo.message}"</p>
+            <p style={{"font-weight":"bold"}}>&#34;{memo.message}&#34;</p>
             <p>From: {memo.name} at {memo.timestamp.toString()}</p>
           </div>
         )
